@@ -16,7 +16,7 @@ void getFiles(const string &pattern, vector<string> &filePath);
 int main() {
     map<string, double> params;
     vector<string> imgPath;
-    getFiles("repo/dataset/cityscapes/leftImage/"
+    getFiles("repo/rootA/*.png"
             "train/*/*.png", imgPath);
  
     // getFiles("/media/ros/Workshop/ws/Datasets/cityscapes/leftImage/"
@@ -38,7 +38,7 @@ int main() {
     uniform_int_distribution<int> random_psi(30, 45);
     uniform_int_distribution<int> random_dia(3, 20);   // blur kernel size
 
-    string savePath{"repo/dataset/rain_train_sem/"};
+    string savePath{"repo/Synthesize_code1/"};
 
 
     for(int index{0}; index < totalIndex; ++index) {
